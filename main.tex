@@ -1,0 +1,45 @@
+\documentclass[10pt, a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[english]{babel}
+
+\usepackage{tgpagella}
+
+\usepackage{thmtools}
+
+\usepackage{microtype}
+\usepackage{csquotes}
+
+\PassOptionsToPackage{usenames, dvipsnames}{xcolor}
+\usepackage{figures/tikzit}
+
+\usepackage[style=alphabetic]{biblatex}
+\usepackage[colorlinks=true, citecolor=Green, linkcolor=NavyBlue, urlcolor=BrickRed]{hyperref}
+\usepackage[capitalise]{cleveref}
+
+\setcounter{biburlnumpenalty}{1000}
+\setcounter{biburlucpenalty}{1000}
+\setcounter{biburllcpenalty}{1000}
+
+\declaretheorem{theorem}
+\declaretheorem[sibling=theorem]{definition}
+\declaretheorem[style=myremark, sibling=theorem]{example}
+
+\addbibresource{refs/refs.biblatex.bib}
+
+\title{String diagrams for layered explanations for digital circuits}
+\author{George Kaye}
+\date{}
+
+\begin{document}
+
+    \maketitle
+
+    `String diagrams for layered explanations' were presented in~\cite{lobski2022string} using the formulation \emph{layered props}.
+    This allows us to present a particular framework at multiple layers of abstraction.
+    This lends itself very well to digital circuits, as we often use `off-the-shelf' components that model some function without needing to know how they are constructed inside.
+    In fact, restricting to one internal construction would be unnecessarily limiting, as there are multiple ways a component can be built which may be more or less beneficial in certain situations.
+    On another note, if diagrams were specified entirely at the gate (or transistor!) level, they would quickly get cluttered and unreadable.
+    Layered props allow us to present this formally.
+
+    \printbibliography
+\end{document}
